@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   scope :older_than_18, -> { where('birthday < ?', 18.year.ago) }
 
-  def full_name
-    self.first_name + ' ' + self.last_name
+  def fullname
+    "#{first_name} #{last_name}"
   end
 end

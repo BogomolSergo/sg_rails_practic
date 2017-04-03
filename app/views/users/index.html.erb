@@ -1,0 +1,9 @@
+<%= flash[:notice] %>
+<h1>Hello WOrld</h1>
+<h2>Users:</h2>
+<ul>
+  <% @users.each do |user| %>
+      <!-- < -- vынесли в паршил -> -->
+      <%= render 'user_row', user: user %>
+  <% end %>
+</ul>
